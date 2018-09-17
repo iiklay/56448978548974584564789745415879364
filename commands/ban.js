@@ -15,10 +15,6 @@ exports.run = (client, message, args) => {
         var userM = message.guild.member(message.mentions.users.first());
         if(userM.id === message.author.id) return message.reply('i can not give a ban for you').then(m => m.delete(5000));
         if(userM.id === message.guild.owner.id) return message.reply("xD really you want give ban to owner");
-        if(message.guild.member(userM.user).highestRole.position >= message.guild.member(message.member).highestRole.position) 
-        return message.reply(`You cant give **${userM.user.username}** ban beacuse him role highest then your role!`);
-        if(message.guild.member(userM.user).highestRole.position >= message.guild.member(client.user).highestRole.position) 
-        return message.reply(`I cant give **${userM.user.username}** ban beacuse him role highest then my role!`);
 
         if (!message.guild.member(user)
         .kickable) return message.reply('**Bot** does not have Permission').then(message => message.delete(35000));
