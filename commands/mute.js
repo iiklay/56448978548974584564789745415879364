@@ -26,10 +26,6 @@ exports.run = async (client, message, argsw) => {
       if(!tomute) return message.reply("You did not mention any users").then(m => m.delete(35000));
       if(mention.id === message.author.id) return message.reply('i can not give a mute for you').then(m => m.delete(5000));
       if(mention.user.id === message.guild.owner.id) return message.reply("xD really you want give mute to owner");
-      if(message.guild.member(mention.user).highestRole.position >= message.guild.member(message.member).highestRole.position) 
-      return message.reply(`You cant give **${mention.user.username}** mute beacuse him role highest then your role!`);
-      if(message.guild.member(mention.user).highestRole.position >= message.guild.member(client.user).highestRole.position) 
-      return message.reply(`I cant give **${mention.user.username}** mute beacuse him role highest then my role!`);
       let muterole = message.guild.roles.find(`name`, "Muted 🤐");
       //start of create role
       if(!muterole){
