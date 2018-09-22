@@ -65,7 +65,7 @@ exports.run = async (client, message, argsw) => {
       .setAuthor(`Member muted!`, user.displayAvatarURL)
       .setThumbnail(user.displayAvatarURL)
       .addField("User",`${user.tag}`,true)
-      .addField("Unmuted by",`${message.author.tag}`,true)
+      .addField("Muted by",`${message.author.tag}`,true)
       .addField("Reason",`${reason}`,true)
       .addField("Time",`**${ms(ms(mutetime))}**`,true)
       .setTimestamp()
