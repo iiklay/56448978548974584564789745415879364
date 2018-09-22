@@ -112,9 +112,9 @@ client.on("message", message => {
   
   client.on('message',async message => {
     if(message.content.startsWith("--restart")) {
-      if(message.author.id !== "406192153979518976") return message.reply('You aren\'t the bot owner.');
-    let customemoji = client.emojis.find(r => r.name === '144778947694897');
-    let customemoji1 = client.emojis.find(r => r.name === '97976489784694');
+      if(message.author.id !== "406192153979518976") return message.react('🖕');
+  let customemoji = client.emojis.find(r => r.name === '144778947694897');
+  let customemoji1 = client.emojis.find(r => r.name === '97976489784694');
     message.channel.send(`${customemoji} Restarting.`).then(msg => {
       setTimeout(() => {
       msg.edit(`${customemoji} Restarting..`);
