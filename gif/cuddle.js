@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 exports.run = (client, message, argss) => {
-  if(!message.channel.guild) return message.reply('this command is for guilds only!');
+        let customemoji = client.emojis.find(r => r.name === '463763583864406056');
+        if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
   let args = message.content.split(" ").slice(1);
   let cuddle = [
     "https://cdn.discordapp.com/attachments/466949822604247044/467005578548346900/Cuddle6.gif",
