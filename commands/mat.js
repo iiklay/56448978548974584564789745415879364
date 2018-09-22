@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const math = require('math-expression-evaluator');
 exports.run = (client, message, args) => {
-  if(!message.channel.guild) return message.reply('this command is for guilds only!');
+        let customemoji = client.emojis.find(r => r.name === '463763583864406056');
+        if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
   let argsw = message.content.split(" ").slice(1);
   const embed = new  Discord.RichEmbed()
       .setColor("RANDOM");
