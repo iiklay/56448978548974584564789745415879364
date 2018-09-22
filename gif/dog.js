@@ -1,7 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 exports.run = (client, message, args) => {
-  if(!message.channel.guild) return message.reply('this command is for guilds only!');
+        let customemoji = client.emojis.find(r => r.name === '463763583864406056');
+        if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
     const memelink = [
       'https://images.dog.ceo/breeds/rottweiler/n02106550_11543.jpg',
       'https://images.dog.ceo/breeds/terrier-fox/n02095314_1782.jpg',
