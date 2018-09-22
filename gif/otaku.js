@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const superagent = require('superagent');
 exports.run = async (client, message, args) => {
-  if(!message.channel.guild) return message.reply('this command is for guilds only!');
+        let customemoji = client.emojis.find(r => r.name === '463763583864406056');
+        if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
   let{body} = await superagent
   .get(`https://sheri.fun/api/v1/mur`);
   let me = new Discord.RichEmbed()
