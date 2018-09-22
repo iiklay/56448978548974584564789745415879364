@@ -113,25 +113,27 @@ client.on("message", message => {
   client.on('message',async message => {
     if(message.content.startsWith("--restart")) {
       if(message.author.id !== "406192153979518976") return message.reply('You aren\'t the bot owner.');
-      message.channel.send('Restarting.').then(msg => {
-        setTimeout(() => {
-        msg.edit('Restarting..');
-        },500);  
-        setTimeout(() => {
-           msg.edit('Restarting...');
-        },1000);
-        setTimeout(() => {
-           msg.edit('Restarting....');
-        },2000);
-      });
-      console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
-      console.log(`Restarting..`);
+    let customemoji = client.emojis.find(r => r.name === '144778947694897');
+    let customemoji1 = client.emojis.find(r => r.name === '97976489784694');
+    message.channel.send(`${customemoji} Restarting.`).then(msg => {
       setTimeout(() => {
-        client.destroy();
-        client.login(process.env.BOT_TOKEN);
-      },3000);
-    }
-  });
+      msg.edit(`${customemoji} Restarting..`);
+      },500);  
+      setTimeout(() => {
+         msg.edit(`${customemoji} Restarting...`);
+      },1000);
+      setTimeout(() => {
+         msg.edit(`${customemoji1} Restarting....`);
+      },2000);
+    });
+    console.log(`${message.author.tag} [ ${message.author.id} ] has restarted the bot.`);
+    console.log(`Restarting..`);
+    setTimeout(() => {
+      client.destroy();
+      client.login(process.env.BOT_TOKEN);
+    },3000);
+  }
+});
 
    client.login(process.env.BOT_TOKEN);
 
