@@ -2,6 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 exports.run = (client, message, args) => {
         if(!message.channel.guild) return message.reply('this command is for guilds only!');
+        let customemoji = client.emojis.find(r => r.name === '549649478945145848');
+        let customemoji1 = client.emojis.find(r => r.name === '5458458469494794');
+        let customemoji2 = client.emojis.find(r => r.name === '548549654894547');
+        let customemoji3 = client.emojis.find(r => r.name === '5458489416948494894');
         var mentionned = message.mentions.users.first();
         var x5bzm;
         if(mentionned){
@@ -28,16 +32,16 @@ exports.run = (client, message, args) => {
             }
             let status = x5bzm.presence.status;     
             if (status === 'online') {
-              status = 'Online';
+              status = `Online ${customemoji}`;
             }
             else if (status === 'idle') {
-              status = 'Idle';
+              status = `Idle ${customemoji1}`;
             }
             else if (status === 'dnd') {
-              status = 'Do Not Disturb';
+              status = `Do Not Disturb ${customemoji2}`;
             }
             else if (status === 'offline') {
-              status = 'Offline 💨';
+              status = `Offline ${customemoji3}`;
             }
         var rolesname = message.guild.members.get(aaa.id).roles.map(role => `${role.name} .  `).slice(1).join(' ')
         if (!rolesname) {
