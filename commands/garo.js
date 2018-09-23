@@ -5,16 +5,28 @@ exports.run = (client, message, args) => {
         if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
   message.channel.send('ok').then(msg => {
     setTimeout(() => {
-      msg.edit(`🚬💨💨💨`);
-     },1500);
-     setTimeout(() => {
-      msg.edit(`🚬💨💨`);
-    },1800);
-    setTimeout(() => {
-    msg.edit(`🚬💨`);
-    },2100);
-    setTimeout(() => {
-    msg.edit(`🚬`)
-    },2400);
+            msg.edit('🚬');
+        }, 500);
+        setTimeout(() => {
+            msg.edit('🚬 ☁ ');
+        }, 700);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁ ');
+        }, 900);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁☁ ');
+        }, 1000);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁☁');
+        }, 1100);
+        setTimeout(() => {
+            msg.edit('🚬 ☁☁');
+        }, 1200);
+        setTimeout(() => {
+            msg.edit('🚬 ☁');
+        }, 1300);
+        setTimeout(() => {
+            msg.edit('🚬');
+        }, 1400);
     });
     }    	
