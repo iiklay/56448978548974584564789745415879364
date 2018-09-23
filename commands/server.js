@@ -77,6 +77,7 @@ exports.run = (client, message, args) => {
     .addField('ID guild',`${message.guild.id}`,true)
     .addField('Onwer',`${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`,true)
     .addField('Rooms Size',`${message.guild.channels.size}`,true)
+    .addField('Last Members',`${Array.from(message.channel.guild.members.values()).sort((a, b) => b.joinedAt - a.joinedAt).map(m => `${m.user.tag}`).splice(0, 1)}`,true)
     .setFooter(`Requested by ${message.author.username}`)
     .setTimestamp()
     message.channel.send({embed:embed});
