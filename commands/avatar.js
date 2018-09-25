@@ -1,7 +1,17 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const sm = require('string-similarity'); 
+const cooldown = new Set()
 exports.run = (client, message, argss,) => { 
+    if (cooldown.has(message.author.id)) {
+    return message.reply("Please wait 5 seconds a next command").then(message => {
+     message.delete(5000) 
+    })
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+        cooldown.delete(message.author.id);
+    }, 10000);
 var args = message.content.split(' ').slice(1); 
 let members = [];
 let indexes = [];
