@@ -44,7 +44,8 @@
     "random-number": "^0.0.9",
     "forever":"^0.15.3",
     "quick.hook":"^1.4.2",
-    "string-similarity":"^1.2.2"
+    "string-similarity":"^1.2.2",
+    "gif-search":"^2.0.1"
   },
   "engines": {
     "node": "8.4.0"
