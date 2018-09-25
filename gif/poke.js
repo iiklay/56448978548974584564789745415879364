@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const cooldown = new Set()
 exports.run = (client, message, argss) => {
+          if(message.author.bot) return;
           if (cooldown.has(message.author.id)) {
     return message.reply("Please wait 5 seconds a next command").then(message => {
      message.delete(5000) 
