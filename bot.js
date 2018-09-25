@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
+const cooldown = new Set()
 const prefix = '-'
 
 
@@ -111,6 +112,16 @@ client.on("message", message => {
 
 client.on('message', async message => {
     if (message.content.startsWith(`-setrole`)) {
+        if(message.author.bot) return;
+    if (cooldown.has(message.author.id)) {
+    return message.reply("Please wait 5 seconds a next command").then(message => {
+     message.delete(5000) 
+    })
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+        cooldown.delete(message.author.id);
+    }, 10000);
         if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("You need Permission `MANAGE_ROLES`");
         let otorol = JSON.parse(fs.readFileSync("./otorol.json", "utf8"));
         let args = message.content.split(' ').slice(1); 
