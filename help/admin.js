@@ -11,9 +11,11 @@ message.author.send(`\n\n\`\`\`
 _________________________________________________
 |                                               |              
 |  -ban  = <@user> <reason>                     |
+|  -unban  = <ID>                               |
+|  -banid  = <ID>                               |
 |  -kick = <@user> <reason>                     |
-|  -delete = chat                               | 
-|  -clean  = clean chat from 1-100              |
+|  -delete = clean chat from 1-100              | 
+|  -clean  = clean chat from 1-99               |
 |  -mute = <@user> <time> <reason>              |
 |  -unmute = <@user> <reason>                   |
 |  -role = <@user> <namerole>                   |
