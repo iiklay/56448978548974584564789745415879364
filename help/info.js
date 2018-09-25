@@ -1,14 +1,19 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
-exports.run = (client, message, args) => {
-        let customemoji = client.emojis.find(r => r.name === '463763583864406056');
-        if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
-  let embed = new Discord.RichEmbed()
-.setColor(message.guild.me.highestRole.color) 
-.setAuthor(message.author.username+`#${message.author.discriminator}`,message.author.displayAvatarURL)
-.setFooter(`ID: ${message.author.username}#${message.author.discriminator}`)
- .addField("📚 info commands 👏" , "meteo, uptame, bots, rooms, count, invite, serverpic server, avatar, ping, botinfo, support, bcowner, myid, userinfo")
-.setFooter(`if you want more information say -helpinfo`)
-.setTimestamp()
-  message.channel.sendEmbed(embed);
-}
+const send = require('quick.hook');
+exports.run = (bot, message, args) => {
+    let customemoji = client.emojis.find(r => r.name === '463763583864406056');
+    if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
+        let embed = new Discord.RichEmbed()
+        .setColor(message.guild.me.highestRole.color) 
+        .setAuthor(message.author.username+`#${message.author.discriminator}`,message.author.displayAvatarURL)
+        .setTitle('Dros Bot ™')
+        .setURL('https://discordapp.com/oauth2/authorize?client_id=464139412251344897&scope=bot&permissions=8')
+        .addField("info commands" , "meteo, uptame, bots, rooms, count, invite, serverpic server, avatar, ping, botinfo, support, bcowner, myid, userinfo")
+        .setFooter(`if you want more information say -helpinfo`)
+        .setTimestamp()
+    send(message.channel, embed, {
+      name: 'Info CMD',
+      icon: 'https://cdn.discordapp.com/attachments/470319916537348099/493941302824796161/sscoqpy.png'
+  }).then(msg => msg.delete(30100));
+} 
