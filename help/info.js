@@ -20,7 +20,7 @@ exports.run = (bot, message, args) => {
         .setAuthor(message.author.username+`#${message.author.discriminator}`,message.author.displayAvatarURL)
         .setTitle('Dros Bot ™')
         .setURL('https://discordapp.com/oauth2/authorize?client_id=464139412251344897&scope=bot&permissions=8')
-        .addField("info commands" , "meteo, uptame, bots, rooms, count, invite, serverpic server, avatar, ping, botinfo, support, bcowner, myid, userinfo")
+        .addField("info commands" , "rolesize, meteo, uptame, bots, rooms, count, invite, serverpic server, avatar, ping, botinfo, support, bcowner, myid, userinfo")
         .setFooter(`if you want more information say -helpinfo`)
         .setTimestamp()
     send(message.channel, embed, {
