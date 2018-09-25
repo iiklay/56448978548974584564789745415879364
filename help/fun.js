@@ -9,7 +9,7 @@ exports.run = (bot, message, args) => {
         .setAuthor(message.author.username+`#${message.author.discriminator}`,message.author.displayAvatarURL)
         .setTitle('Dros Bot ™')
         .setURL('https://discordapp.com/oauth2/authorize?client_id=464139412251344897&scope=bot&permissions=8')
-        .addField(`funny commands` , "catgif, fox, cat, garo, rabbits, dog, how gay, rip, shit, slap, gifslap, hug, punch, kill, anime, poke, cuddle, pat, kiss, tickle, memes, ask, otaku, any, gay, nik")
+        .addField(`funny commands` , "catgif, cmind, isay, fox, cat, garo, rabbits, dog, how gay, rip, shit, slap, gifslap, hug, punch, kill, anime, poke, cuddle, pat, kiss, tickle, memes, ask, otaku, any, gay, nik")
         .setFooter(`if you want more information say -helpfun`)
         .setTimestamp()
     send(message.channel, embed, {
