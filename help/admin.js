@@ -15,6 +15,7 @@ _________________________________________________
 |  -unban  = <ID>                               |
 |  -banid  = <ID>                               |
 |  -kick = <@user> <reason>                     |
+|  -setrole  =  to set auto role                |
 |  -delete = clean chat from 1-100              | 
 |  -clean  = clean chat from 1-99               |
 |  -mute = <@user> <time> <reason>              |
