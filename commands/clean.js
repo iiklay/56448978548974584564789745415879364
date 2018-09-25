@@ -1,5 +1,6 @@
         const Discord = require("discord.js");
         const client = new Discord.Client();
+const cooldown = new Set()
         exports.run = (client, message, argsc) => {
                   if (cooldown.has(message.author.id)) {
     return message.reply("Please wait 5 seconds a next command").then(message => {
