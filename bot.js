@@ -110,7 +110,7 @@ client.on("message", message => {
 
 
 client.on('message', async message => {
-    if (message.content.startsWith(`ff`)) {
+    if (message.content.startsWith(`-setrole`)) {
         if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("You need Permission `MANAGE_ROLES`");
         let otorol = JSON.parse(fs.readFileSync("./otorol.json", "utf8"));
         let args = message.content.split(' ').slice(1); 
