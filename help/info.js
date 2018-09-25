@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const send = require('quick.hook');
 const cooldown = new Set()
 exports.run = (bot, message, args) => {
+      if(message.author.bot) return;
       if (cooldown.has(message.author.id)) {
     return message.reply("Please wait 5 seconds a next command").then(message => {
      message.delete(5000) 
