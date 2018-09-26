@@ -5,7 +5,7 @@ exports.run = (client, message, argss) => {
   let men = message.mentions.users.first()
   let args = message.content.split(" ").slice(2).join(" ")
   let defineduser = message.mentions.users.first();
-    if (message.author.id !== '406192153979518976') return message.reply('sorry but this command for owner 😪')
+    if (message.author.id !== '406192153979518976') return ;
     message.delete();
       if(!args) return message.channel.send("`Usage: "  + 'iam <@someone> <message>`');
       if(!men) return message.channel.send("`Usage: "  + 'iam <@someone> <message>`');
