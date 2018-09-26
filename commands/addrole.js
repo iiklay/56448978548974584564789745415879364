@@ -2,7 +2,6 @@ const Discord = require('discord.js')
 const client = new Discord.Client();
 exports.run = async (client, message, argss) => {
   if(message.author.bot) return;
-    if (cooldown.has(message.author.id)) {
   let customemoji = client.emojis.find(r => r.name === '463763583864406056');
   if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
   if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply("You Need Permission `MANAGE_ROLES`");
