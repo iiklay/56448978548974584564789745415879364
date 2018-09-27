@@ -30,10 +30,8 @@ message.author.send(`\`\`\`asciidoc
 -bans       :: to see all members banned from server
 -chatmute   :: mute chat for all members
 -openchat   :: unmte chat.
--say        :: command say normal
--sayembed   :: command say with embed
--shut       :: shut member from room | room is optional
--open       :: open shut member from room
+-shut       :: Mute a member of the room The room is optional
+-open       :: unmute member
 -antilinks  :: to activate the links blocker | same command to disable
 -antiinfo   :: info about command antilinks enable or disable
 
