@@ -45,6 +45,9 @@
     "forever":"^0.15.3",
     "quick.hook":"^1.4.2",
     "string-similarity":"^1.2.2",
+    "cpu-stat":"^2.0.1",
+    "moment-duration-format":"^2.2.2",
+    "os":"^0.1.1",
     "gif-search":"^2.0.1"
   },
   "engines": {
