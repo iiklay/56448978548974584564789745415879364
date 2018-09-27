@@ -31,7 +31,7 @@ exports.run = (client, message, args) => {
 
     message.channel.send(`\`\`\`asciidoc
 [Bot Stats]
-= Ping             :: ${Date.now() - message.createdTimestamp} MS
+= Ping             :: ${client.ping.toFixed(0)} MS
 = Guilds           :: ${Math.ceil(client.guilds.size)}
 = Users            :: ${client.users.size}
 = Channels         :: ${client.channels.size}
