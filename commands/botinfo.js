@@ -20,6 +20,7 @@ exports.run = (client, message, args) => {
     setTimeout(() => {
         cooldown.delete(message.author.id);
     }, 10000);
+   message.channel.startTyping();
         let customemoji = client.emojis.find(r => r.name === '463763583864406056');
         if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
   let cpuLol;
@@ -47,6 +48,6 @@ exports.run = (client, message, args) => {
 = CPU usage        :: ${percent.toFixed(2)}%
 = Platform         :: ${os.platform()}
 
-= Creator          :: abdo#1889\`\`\``)
+= Creator          :: abdo#1889\`\`\``).then(()=> { message.channel.stopTyping(); });
 })
 }
