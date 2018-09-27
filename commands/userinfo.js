@@ -13,10 +13,10 @@ exports.run = (client, message, args) => {
         cooldown.delete(message.author.id);
     }, 10000);
         if(!message.channel.guild) return message.reply('this command is for guilds only!');
-        let customemoji = client.emojis.find(r => r.name === '549649478945145848');
-        let customemoji1 = client.emojis.find(r => r.name === '5458458469494794');
-        let customemoji2 = client.emojis.find(r => r.name === '548549654894547');
-        let customemoji3 = client.emojis.find(r => r.name === '5458489416948494894');
+        let customemoji = client.emojis.find(r => r.name === 'online');
+        let customemoji1 = client.emojis.find(r => r.name === 'idle');
+        let customemoji2 = client.emojis.find(r => r.name === 'dnd');
+        let customemoji3 = client.emojis.find(r => r.name === 'invisible');
         var mentionned = message.mentions.users.first();
         var x5bzm;
         if(mentionned){
@@ -70,10 +70,10 @@ exports.run = (client, message, args) => {
           .setThumbnail(x5bzm.displayAvatarURL)
           .addField('Name',`**${x5bzm.username}**#${x5bzm.discriminator}`, true)
           .addField('ID',`${x5bzm.id}`,true)
-          .addField("Joined server", message.member.joinedAt.toLocaleString(), true)    
-          .addField('Joined Discord', message.author.createdAt.toLocaleString(), true)
+          .addField("Joined at", message.member.joinedAt.toLocaleString(), true)    
+          .addField('Created at', message.author.createdAt.toLocaleString(), true)
           .addField('Playing',''+y+'' , true)
-          .addField('Account', `is ${m}`, true)
+          .addField('Account', `IS ${m}`, true)
           .addField('Status', `${status}`, true)
           .addField('Nick', `${nick}`, true)
           .addField(`Roles **[${rolesize}]**`,`${rolesname}`)
