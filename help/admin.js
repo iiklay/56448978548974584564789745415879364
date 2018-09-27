@@ -1,38 +1,41 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 exports.run = (client, message, args) => {
-         if(message.author.bot) return;
-         let customemoji = client.emojis.find(r => r.name === '463763583864406056');
-        if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
-  message.react('✉')
+randomNumber = Math.floor(Math.random() * (6 - 1) + 1);
+if(message.author.bot) return;
+let customemoji = client.emojis.find(r => r.name === '463763583864406056');
+if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
+if(randomNumber==2){
+message.react('✉')
+}else{
+message.react(`📂`)
+}
 message.reply('check your private i sent you message').then(message => {message.delete(20000)})
-message.author.send(`\n\n\`\`\`
-                  Admin Commands    
+message.author.send(`\`\`\`asciidoc
+= Command List Dros Bot =
 
-_________________________________________________
-|                                               |              
-|  -ban  = <@user> <reason>                     |
-|  -unban  = <ID>                               |
-|  -banid  = <ID>                               |
-|  -kick = <@user> <reason>                     |
-|  -setrole  =  to set auto role                |
-|  -delete = clean chat from 1-100              | 
-|  -clean  = clean chat from 1-99               |
-|  -mute = <@user> <time> <reason>              |
-|  -unmute = <@user> <reason>                   |
-|  -role = <@user> <namerole>                   |
-|  -removerole = <@user> <name role>            |
-|  -bans = all members banned                   |
-|  -chatmute                                    |
-|  -openchat                                    |
-|  -say = command say normal                    |
-|  -sayembed = command say with embed           |
-|  -shut = @<user> Mute a user from the room    |
-|  -open = @<user> open mute user from room     |
-|  -antilinks = blocker links other clans       |
-|  -antiinfo = information about command        |
-|_______________________________________________|
-                                             
-       don forget create channel named logs         
-    \`\`\``)
- }
+[Admin commands]
+
+-ban        :: ban the user with reason in private | reason is optional
+-kick       :: Kicks the user with reason in private | reason is optional
+-mute       :: mute the user with reason in private | reason is optional
+-unban      :: unban the user
+-banid      :: ban user with id
+-setrole    :: set auto role at joined member
+-delete     :: clean chat choose from 1 to 100
+-clean      :: clean fast choose from 1 to 99
+-unmute     :: unmute user with reason in private | reason is optional
+-role       :: to give a role to a user
+-removerole :: remove role from a user
+-bans       :: to see all members banned from server
+-chatmute   :: mute chat for all members
+-openchat   :: unmte chat.
+-say        :: command say normal
+-sayembed   :: command say with embed
+-shut       :: shut member from room | room is optional
+-open       :: open shut member from room
+-antilinks  :: to activate the links blocker | same command to disable
+-antiinfo   :: info about command antilinks enable or disable
+
+create room named logs to get all logs about server\`\`\``)
+}
