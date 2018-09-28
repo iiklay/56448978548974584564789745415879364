@@ -4,13 +4,14 @@ exports.run = (client, message, args) => {
 randomNumber = Math.floor(Math.random() * (6 - 1) + 1);
 if(message.author.bot) return;
 let customemoji = client.emojis.find(r => r.name === '463763583864406056');
+let customemoji1 = client.emojis.find(r => r.name === 'done');
 if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
 if(randomNumber==2){
 message.react('✉')
 }else{
 message.react(`📂`)
 }
-message.reply('تحقق من الخاص بك أرسل لك رسالة').then(message => {message.delete(20000)})
+message.reply(`تحقق من الخاص بك أرسل لك رسالة ${customemoji1}`).then(message => {message.delete(10000)})
 message.author.send(`\`\`\`asciidoc
 = قائمة الأوامر Dros bot =
 
