@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const snek = require('snekfetch');
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, argsg) => {
   var fsn = module.require('fs-nextra');
   let args = message.content.split(' ').slice(1); 
   if (!message.guild.member(client.user).hasPermission('ATTACH_FILES')) return message.reply('Sorry, i dont have the perms to do this cmd i need ATTACH_FILES. :x:')
