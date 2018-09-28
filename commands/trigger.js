@@ -1,9 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const snek = require('snekfetch');
-exports.run = async (client, message, argks) => {
-  var fsn = module.require('fs-nextra');
-  let args = message.content.split(' ').slice(1); 
+const fsn = require('fs-nextra');
+exports.run = async (client, message, args) => {
   if (!message.guild.member(client.user).hasPermission('ATTACH_FILES')) return message.reply('Sorry, i dont have the perms to do this cmd i need ATTACH_FILES. :x:')
    const { Canvas } = require('canvas-constructor');
     if (message.mentions.users.size < 1) return message.channel.send("You didn't mention a user to put them behind bars");
