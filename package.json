@@ -48,7 +48,8 @@
     "cpu-stat":"^2.0.1",
     "moment-duration-format":"^2.2.2",
     "os":"^0.1.1",
-    "gif-search":"^2.0.1"
+    "gif-search":"^2.0.1",
+    "weather-js":"^2.0.0"
   },
   "engines": {
     "node": "8.4.0"
