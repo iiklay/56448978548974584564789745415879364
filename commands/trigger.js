@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
    const { Canvas } = require('canvas-constructor');
     if (message.mentions.users.size < 1) return message.channel.send("You didn't mention a user to put them behind bars");
    const getSlapped = async (person) => {
-    const plate = await fsn.readFile('./assets/images/plate_triggered.png');
+    const plate = await fsn.readFile('./assets/images/plate_triggered.gif');
     const png = person.replace('.gif', '.png');
     const { body } = await snek.get(png);
     return new Canvas(330, 330)
@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
      try {
     const person = message.mentions.users.first().avatarURL;
     const result = await getSlapped(person);
-    await message.channel.send({ files: [{ attachment: result, name: 'trigger.png' }] });
+    await message.channel.send({ files: [{ attachment: result, name: 'trigger.gif' }] });
   } catch (error) {
     throw error;
   }
