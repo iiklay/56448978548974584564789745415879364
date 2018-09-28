@@ -16,6 +16,7 @@ exports.run = (client, message, args) => {
         if(!message.channel.guild) return message.reply(`This command is for guilds only! ${customemoji}`);
   message.delete()
 let customemoji6 = client.emojis.find(r => r.name === 'arabic');
+let customemoji7 = client.emojis.find(r => r.name === 'photos');
 let customemoji1 = client.emojis.find(r => r.name === '5449874894189564');
 let customemoji2 = client.emojis.find(r => r.name === 'info');
 let customemoji3 = client.emojis.find(r => r.name === 'admin');
@@ -29,7 +30,8 @@ let customemoji5 = client.emojis.find(r => r.name === 'text');
   .addField(`-fun ${customemoji1}`,'fun commands',true)   
   .addField(`-music ${customemoji4}`,'music commands',true)   
   .addField(`-text ${customemoji5}`,'text commands',true)   
-  .addField(`-helpar ${customemoji6}`,'للمساعدة باللغة العربية',true)   
+  .addField(`-helpar ${customemoji6}`,'للمساعدة باللغة العربية',true)
+  .addField(`-Image ${customemoji7}`,'commands photos',true)
   .setFooter(client.user.username,client.user.displayAvatarURL) 
   .setTimestamp()
   message.channel.send(abdo);
